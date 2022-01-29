@@ -4,6 +4,8 @@ y lo muestro por 'ID' al presionar el botón 'mostrar'
 */
 function mostrar()
 {
-	alert("ok");
+let entradaDatos;
+entradaDatos=prompt('Ingrese un dato');
+txtIdNombre.value=entradaDatos;
 }
 
