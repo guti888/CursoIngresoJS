@@ -6,15 +6,13 @@ function sumar()
 {
 let numeroUno;
 let numeroDos;
-let suma;
-numeroUno=parseInt(txtIdNumeroUno.value);
-numeroDos=parseInt(txtIdNumeroDos.value);
-suma=numeroUno+numeroDos;
-if(isNaN(suma)){
-	alert('Error, verificar numeros ingresados');
+let total;
+numeroUno = txtIdNumeroUno.value;
+numeroDos = txtIdNumeroDos.value;
+numeroUno = parseInt(numeroUno);
+numeroDos = parseInt(numeroDos);
+total = numeroUno + numeroDos;
+alert(total);
 }
-else{
-alert(suma);
-}
-}
+
 

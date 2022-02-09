@@ -6,22 +6,8 @@ function mostrar()
 let edad;
 let nombre;
 let mensaje;
-edad=parseInt(txtIdEdad.value);
-nombre=txtIdNombre.value;
-mensaje='Usted se llama '+nombre+' y tiene '+edad;
-if(isNaN(edad)||isNaN(nombre)==false){
-	alert('Verificar datos ingresados');
-}
-else{
+edad = txtIdEdad.value;
+nombre = txtIdNombre.value;
+mensaje ='Usted se llama '+nombre+' y tiene '+edad;
 alert(mensaje);
 }
-
-
-
-
-
-
-
-
-}
-
