@@ -8,4 +8,3 @@ let entradaDatos;
 entradaDatos=prompt('Ingrese un dato');
 txtIdNombre.value=entradaDatos;
 }
-

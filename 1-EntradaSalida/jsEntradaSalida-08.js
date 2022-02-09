@@ -17,4 +17,3 @@ resto = numeroDividendo % numeroDivisor;
 mensaje = "El resto entre el dividendo y el divisor es: ";
 alert(mensaje + resto);
 }
-

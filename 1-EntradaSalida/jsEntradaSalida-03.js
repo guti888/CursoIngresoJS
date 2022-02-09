@@ -8,4 +8,3 @@ function mostrar()
 	alert(entradaDatos);
 }
 
-

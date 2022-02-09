@@ -17,7 +17,6 @@ total = numeroUno + numeroDos;
 mensaje = "El total es: ";
 alert(mensaje + total);
 }
-
 function restar()
 {
 	let numeroUno;

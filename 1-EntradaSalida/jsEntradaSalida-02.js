@@ -7,4 +7,3 @@ let nombre;
 nombre = prompt('Ingresar un nombre');
 alert(nombre);
 }
-

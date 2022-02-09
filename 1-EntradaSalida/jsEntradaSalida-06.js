@@ -14,5 +14,3 @@ numeroDos = parseInt(numeroDos);
 total = numeroUno + numeroDos;
 alert(total);
 }
-
-

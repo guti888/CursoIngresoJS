@@ -14,4 +14,3 @@ aumento = sueldo*0.10;
 resultado = sueldo + aumento;
 txtIdResultado.value = resultado;
 }
-
