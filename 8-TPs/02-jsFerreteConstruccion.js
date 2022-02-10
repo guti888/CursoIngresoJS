@@ -18,8 +18,8 @@ largo = parseInt(largo);
 ancho = parseInt(ancho);
 perimetro = (largo * 2) + (ancho * 2);
 cantidadDeAlambre = perimetro * cantidadDeHilos;
-mensaje = "Cantidad de alambre a comprar (x3 hilos): ";
-alert(mensaje + cantidadDeAlambre + "m");
+mensaje = 'Cantidad de alambre a comprar (x3 hilos): ';
+alert(mensaje + cantidadDeAlambre + 'm');
 }
 function Circulo () 
 {
@@ -27,13 +27,13 @@ let radio;
 let perimetro;
 let cantidadDeHilos;
 let cantidadDeAlambre;
-let mensaje = "Cantidad de alambre a comprar (x3 hilos): ";
+let mensaje = 'Cantidad de alambre a comprar (x3 hilos): ';
 cantidadDeHilos = 3;
 radio = txtIdRadio.value;
 radio = parseInt(radio);
 perimetro = 2 * 3.14 * radio;
 cantidadDeAlambre = perimetro * cantidadDeHilos;
-alert(mensaje + cantidadDeAlambre + "m");
+alert(mensaje + cantidadDeAlambre + 'm');
 }
 function Materiales () 
 {
@@ -60,8 +60,8 @@ function Materiales ()
     bolsasCementoCalculadas = bolsasCemento * areaRectangulo;
     bolsasCalCalculadas = bolsasCal * areaRectangulo;
 
-    mensaje = "Metros cuadrados por cubrir: " + areaRectangulo + 'm²' + '\n';
-    mensaje = mensaje + "Bolsas de cementos necesarias: " + bolsasCementoCalculadas + '\n';
-    mensaje = mensaje + "Bolsas de cal necesarias: " + bolsasCalCalculadas;
+    mensaje = 'Metros cuadrados por cubrir: ' + areaRectangulo + 'm²' + '\n';
+    mensaje = mensaje + 'Bolsas de cementos necesarias: ' + bolsasCementoCalculadas + '\n';
+    mensaje = mensaje + 'Bolsas de cal necesarias: ' + bolsasCalCalculadas;
     alert(mensaje);
 }
