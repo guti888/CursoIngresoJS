@@ -6,9 +6,71 @@ C.	Si compra 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas
 D.	Si compra 3  lamparitas bajo consumo marca "ArgentinaLuz"  el descuento es del 15%, si es  “FelipeLamparas” se hace un descuento del 10 % y si es de otra marca un 5%.
 E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de ingresos brutos en informar del impuesto con el siguiente mensaje:
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
-
  */
+//Agustin Angel Gutierrez. div-h.
 function CalcularPrecio () 
 {
- 	
+    let lamparas;
+    let cantidadLamparas;
+    let precioConDescuento;
+    let precio;
+    let marca;
+    let descuento;
+    let ingresosBrutos;
+    let mensaje;
+    descuento = 0;
+    lamparas = 35;
+    cantidadLamparas = txtIdCantidad.value;
+    cantidadLamparas = parseInt(cantidadLamparas);
+    marca = Marca.value;
+    precio = cantidadLamparas * lamparas;
+
+    if(cantidadLamparas >= 6){
+        descuento = (precio * 50) / 100;
+    }
+        else{
+            if(cantidadLamparas == 5){
+               if(marca == "ArgentinaLuz"){
+                    descuento = (precio * 40) / 100;
+               }
+                else{
+                    descuento = (precio * 30) / 100;
+                }
+            }
+            else{
+                if(cantidadLamparas == 4){
+                    if(marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
+                        descuento = (precio * 25) / 100;   
+                    }
+                    else{
+                        descuento = (precio * 20) / 100;
+                    }
+                }
+                else{
+                    if (cantidadLamparas == 3){
+                        if(marca == "ArgentinaLuz"){
+                            descuento = (precio * 15) / 100;
+                        }
+                        else{
+                            if(marca == "FelipeLamparas"){
+                                descuento = (precio * 10) / 100;
+                            }
+                            else{
+                                descuento = (precio * 5) / 100;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    precioConDescuento = precio - descuento;
+    if(precioConDescuento > 120){
+        ingresosBrutos = precioConDescuento * 0.10;
+        precioConDescuento = precioConDescuento + ingresosBrutos;
+        mensaje ="IIBB Usted pago: $"+ precioConDescuento;
+        mensaje = mensaje + " siendo $" +ingresosBrutos + " el impuesto que se pagó";
+        alert(mensaje);
+    }
+    txtIdprecioDescuento.value = precioConDescuento;
 }
