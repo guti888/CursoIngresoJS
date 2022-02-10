@@ -24,13 +24,13 @@ function CalcularPrecio ()
     cantidadLamparas = parseInt(cantidadLamparas);
     marca = Marca.value;
     precio = cantidadLamparas * lamparas;
-
+    //desarrollo
     if(cantidadLamparas >= 6){
         porcentajeDescuento = (precio * 50) / 100;
     }
         else{
             if(cantidadLamparas == 5){
-               if(marca == "ArgentinaLuz"){
+               if(marca == 'ArgentinaLuz'){
                     porcentajeDescuento = (precio * 40) / 100;
                }
                 else{
@@ -39,7 +39,7 @@ function CalcularPrecio ()
             }
             else{
                 if(cantidadLamparas == 4){
-                    if(marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
+                    if(marca == 'ArgentinaLuz' || marca == 'FelipeLamparas'){
                         porcentajeDescuento = (precio * 25) / 100;   
                     }
                     else{
@@ -48,11 +48,11 @@ function CalcularPrecio ()
                 }
                 else{
                     if (cantidadLamparas == 3){
-                        if(marca == "ArgentinaLuz"){
+                        if(marca == 'ArgentinaLuz'){
                             porcentajeDescuento = (precio * 15) / 100;
                         }
                         else{
-                            if(marca == "FelipeLamparas"){
+                            if(marca == 'FelipeLamparas'){
                                 porcentajeDescuento = (precio * 10) / 100;
                             }
                             else{
@@ -61,15 +61,14 @@ function CalcularPrecio ()
                         }
                     }
                 }
-
             }
         }
     precioConDescuento = precio - porcentajeDescuento;
     if(precioConDescuento > 120){
         ingresosBrutos = precioConDescuento * 0.10;
         precioConDescuento = precioConDescuento + ingresosBrutos;
-        mensaje ="IIBB Usted pago: $"+ precioConDescuento;
-        mensaje = mensaje + " siendo $" +ingresosBrutos + " el impuesto que se pagó";
+        mensaje ='IIBB Usted pago: $'+ precioConDescuento;
+        mensaje = mensaje + ' siendo $' +ingresosBrutos + ' el impuesto que se pagó';
         alert(mensaje);
     }
     txtIdprecioDescuento.value = precioConDescuento;
