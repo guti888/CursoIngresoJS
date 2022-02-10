@@ -15,10 +15,10 @@ function CalcularPrecio ()
     let precioConDescuento;
     let precio;
     let marca;
-    let descuento;
+    let porcentajeDescuento;
     let ingresosBrutos;
     let mensaje;
-    descuento = 0;
+    porcentajeDescuento = 0;
     lamparas = 35;
     cantidadLamparas = txtIdCantidad.value;
     cantidadLamparas = parseInt(cantidadLamparas);
@@ -26,37 +26,37 @@ function CalcularPrecio ()
     precio = cantidadLamparas * lamparas;
 
     if(cantidadLamparas >= 6){
-        descuento = (precio * 50) / 100;
+        porcentajeDescuento = (precio * 50) / 100;
     }
         else{
             if(cantidadLamparas == 5){
                if(marca == "ArgentinaLuz"){
-                    descuento = (precio * 40) / 100;
+                    porcentajeDescuento = (precio * 40) / 100;
                }
                 else{
-                    descuento = (precio * 30) / 100;
+                    porcentajeDescuento = (precio * 30) / 100;
                 }
             }
             else{
                 if(cantidadLamparas == 4){
                     if(marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
-                        descuento = (precio * 25) / 100;   
+                        porcentajeDescuento = (precio * 25) / 100;   
                     }
                     else{
-                        descuento = (precio * 20) / 100;
+                        porcentajeDescuento = (precio * 20) / 100;
                     }
                 }
                 else{
                     if (cantidadLamparas == 3){
                         if(marca == "ArgentinaLuz"){
-                            descuento = (precio * 15) / 100;
+                            porcentajeDescuento = (precio * 15) / 100;
                         }
                         else{
                             if(marca == "FelipeLamparas"){
-                                descuento = (precio * 10) / 100;
+                                porcentajeDescuento = (precio * 10) / 100;
                             }
                             else{
-                                descuento = (precio * 5) / 100;
+                                porcentajeDescuento = (precio * 5) / 100;
                             }
                         }
                     }
@@ -64,7 +64,7 @@ function CalcularPrecio ()
 
             }
         }
-    precioConDescuento = precio - descuento;
+    precioConDescuento = precio - porcentajeDescuento;
     if(precioConDescuento > 120){
         ingresosBrutos = precioConDescuento * 0.10;
         precioConDescuento = precioConDescuento + ingresosBrutos;
